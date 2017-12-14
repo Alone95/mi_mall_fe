@@ -7,7 +7,7 @@
 #
 
 GIT_HOME=/developer/git-repository
-DEST_PATH=/product/frontend
+DEST_PATH=/product/frontend/
 
 # clear git dist
 echo -e "==============Clear git Dist=========="
