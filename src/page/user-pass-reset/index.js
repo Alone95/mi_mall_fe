@@ -1,8 +1,8 @@
 /*
  * @Author: alone 
  * @Date: 2017-12-12 14:58:04 
- * @Last Modified by:   alone 
- * @Last Modified time: 2017-12-12 14:58:04 
+ * @Last Modified by: alone
+ * @Last Modified time: 2017-12-15 23:52:16
  */
 
 'use strict';
@@ -96,14 +96,15 @@ var page = {
     loadStepQuestion : function () {
         formError.hide();
         $('.step-username').hide()
-            .sibling('.step-question').show()
+            .siblings('.step-question').show()
             .find('.question').text(this.date.question);
     },
     //加载输入新密码
     loadStepPassword : function () {
         formError.hide();
         $('.step-question').hide()
-            .sibling('.step-password').show();
+            .siblings('.step-password').show();
+            
     }
 };
 $(function () {
