@@ -13,7 +13,9 @@ require('page/common/header/index.js');
 require('util/slider/index.js');
 var navSide         = require('page/common/nav-side/index.js');
 var templateBanner  = require('./banner.string');
+// var htmlTemplate = require('./index.string');
 var _mm             = require('util/mm.js');
+var _index          = require('service/index-service.js');
 
 $(function() {
     // 渲染banner的html
@@ -32,4 +34,19 @@ $(function() {
 
 $(function () {
     $('.banner').unslider();
+   // page.init();
 });
+
+// var page ={
+//     init: function () {
+//         var html ="";
+//         html =_mm.renderHtml(htmlTemplate,'');
+//         this.getProductRecommend();
+        
+//     },
+
+
+
+
+// }
+

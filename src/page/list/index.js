@@ -65,6 +65,20 @@ var page = {
                     _this.data.listParam.orderBy = 'price_desc';
                 }
             }
+            //点击销量排序
+            else if($this.data('type')==='sales'){
+                //active class 的处理
+               $this.addClass('active').siblings('.sort-item')
+                        .removeClass('active asc desc');
+                // 升序、降序的处理
+                if(!$this.hasClass('asc')){
+                    $this.addClass('asc').removeClass('desc');
+                    _this.data.listParam.orderBy = 'sales_volume_asc';
+                }else{
+                    $this.addClass('desc').removeClass('asc');
+                    _this.data.listParam.orderBy = 'sales_volume_desc';
+                }                        
+            }
             // 重新加载列表
             _this.loadPaymentInfo();
         });

@@ -1,8 +1,8 @@
 /*
  * @Author: alone 
  * @Date: 2017-12-12 14:53:49 
- * @Last Modified by:   alone 
- * @Last Modified time: 2017-12-12 14:53:49 
+ * @Last Modified by: alone
+ * @Last Modified time: 2018-04-01 17:37:17
  */
 /**
  * Created by weimin on 2017/6/13.
@@ -45,6 +45,7 @@ var _mm = {
     },
     //获取url参数
     getUrlParam :function(name){
+        //happymmall.com/product/list?keyword=xxx&page=1
         var reg     = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
         var result  = window.location.search.substr(1).match(reg);
         return result ? decodeURIComponent(result[2]) : null;
@@ -68,7 +69,7 @@ var _mm = {
         var value = $.trim(value);
         // 非空验证
         if('require' === type){
-            return !!value;
+            return !!value;//强转为bool型
         }
         // 手机号验证
         if('phone' === type){
