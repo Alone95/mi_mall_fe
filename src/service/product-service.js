@@ -9,6 +9,7 @@
 
 var _mm = require('util/mm.js');
 
+
 var _product = {
     // 获取商品列表
     getProductList : function(listParam, resolve, reject){
@@ -28,6 +29,15 @@ var _product = {
             },
             success : resolve,
             error   : reject
+        });
+    },
+   //获取推荐商品
+    getProductRecommend: function (listParam, resolve, reject) {
+        _mm.request({
+            data: listParam,
+            url: _mm.getServerUrl('/index/getProductRecommend.do'),
+            success: resolve,
+            error: reject 
         });
     }
 };
